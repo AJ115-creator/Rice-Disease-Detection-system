@@ -1,22 +1,50 @@
-# 🌾 Rice Disease Detection System
+# Rice Disease Detection System
 
 An AI-powered web application for detecting rice plant diseases using deep learning and environmental data analysis.
+
+## **[Try the Live App Here](https://rice-disease-detection-system-dool.vercel.app/)**
+
+> **Live Demo**: [https://rice-disease-detection-system-dool.vercel.app/](https://rice-disease-detection-system-dool.vercel.app/)
+> 
+> Upload images, detect diseases, and analyze environmental conditions in real-time.
+
+---
 
 ![Rice Disease Detection](https://img.shields.io/badge/AI-Powered-green)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 ![Python](https://img.shields.io/badge/Python-3.9-blue)
 ![React](https://img.shields.io/badge/React-18.3-blue)
+[![Frontend Deployment](https://img.shields.io/badge/Frontend-Live%20on%20Vercel-00C7B7?logo=vercel)](https://rice-disease-detection-system-dool.vercel.app/)
+[![Backend Deployment](https://img.shields.io/badge/Backend-Live%20on%20Render-46E3B7?logo=render)](https://rdds-backend.onrender.com)
 
-## 🎯 Features
+## Features
 
-- **🔍 Image-Based Disease Detection**: Upload rice plant images to detect diseases using CNN
-- **🌡️ Environmental Analysis**: Analyze environmental conditions for crop health
-- **🔐 Secure Authentication**: Firebase-powered login with email and Google sign-in
-- **📊 Prediction History**: Track and review past predictions
-- **📱 Responsive Design**: Beautiful, modern UI that works on all devices
-- **⚡ Real-time Processing**: Fast disease detection with confidence scores
+- **Image-Based Disease Detection**: Upload rice plant images to detect diseases using CNN
+- **Environmental Analysis**: Analyze environmental conditions for crop health
+- **Secure Authentication**: Firebase-powered login with email and Google sign-in
+- **Prediction History**: Track and review past predictions
+- **Responsive Design**: Beautiful, modern UI that works on all devices
+- **Real-time Processing**: Fast disease detection with confidence scores
 
-## 🏗️ Architecture
+## Live Deployment
+
+### Try the Application Now
+
+**Frontend (Full System)**: [https://rice-disease-detection-system-dool.vercel.app/](https://rice-disease-detection-system-dool.vercel.app/)
+- Test the complete Rice Disease Detection System
+- Upload images and get instant predictions
+- Analyze environmental conditions
+- Deployed on **Vercel**
+
+**Backend API**: [https://rdds-backend.onrender.com](https://rdds-backend.onrender.com)
+- RESTful API with disease detection endpoints
+- Health check and model status
+- Deployed on **Render**
+- **Backend Repository**: [https://github.com/AJ115-creator/RDDS-backend](https://github.com/AJ115-creator/RDDS-backend)
+
+> **Note**: The backend may take 30-60 seconds to wake up on first request (free tier cold start).
+
+## Architecture
 
 ### Frontend
 - **Framework**: React 18 with Vite
@@ -39,7 +67,7 @@ An AI-powered web application for detecting rice plant diseases using deep learn
 3. Leaf Smut
 4. Healthy (no disease)
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.9+
@@ -73,9 +101,9 @@ npm run dev
 Frontend runs at: `http://localhost:5173`
 
 #### 4. Open Browser
-Visit `http://localhost:5173` and start detecting diseases!
+Visit `http://localhost:5173` and start detecting diseases.
 
-## 📦 Project Structure
+## Project Structure
 
 ```
 Rice-Disease-Detection-System/
@@ -102,7 +130,7 @@ Rice-Disease-Detection-System/
 └── QUICK_DEPLOY.md           # Quick deployment guide
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Frontend Environment Variables
 Create `.env` in Frontend folder:
@@ -115,21 +143,31 @@ VITE_API_URL=http://localhost:8000
 FRONTEND_URL=http://localhost:5173
 ```
 
-## 🌐 Deployment
+## Deployment
 
-### Quick Deploy (15 minutes)
+### Current Production Deployment
+- **Backend**: Deployed on [Render](https://render.com) - [https://rdds-backend.onrender.com](https://rdds-backend.onrender.com)
+  - Repository: [https://github.com/AJ115-creator/RDDS-backend](https://github.com/AJ115-creator/RDDS-backend)
+- **Frontend**: Deployed on [Vercel](https://vercel.com) - [https://rice-disease-detection-system-dool.vercel.app/](https://rice-disease-detection-system-dool.vercel.app/)
+  - Repository: [https://github.com/AJ115-creator/Rice-Disease-Detection-system](https://github.com/AJ115-creator/Rice-Disease-Detection-system)
+- **Database**: Firebase Firestore (Free tier)
+- **Authentication**: Firebase Auth (Free tier)
+
+### Deploy Your Own Instance
+
+#### Quick Deploy (15 minutes)
 See [QUICK_DEPLOY.md](QUICK_DEPLOY.md) for step-by-step instructions.
 
-### Detailed Deployment
+#### Detailed Deployment
 See [DEPLOYMENT.md](DEPLOYMENT.md) for comprehensive guide.
 
-### Recommended Stack (FREE)
+#### Recommended Stack (FREE)
 - **Backend**: Render.com (Free tier)
 - **Frontend**: Vercel (Free tier)
 - **Database**: Firebase Firestore (Free tier)
 - **Auth**: Firebase Auth (Free tier)
 
-## 🧪 Testing
+## Testing
 
 ### Test Image Detection
 Use images from `Test data/` folder:
@@ -149,7 +187,7 @@ Soil pH: 6.5
 Relative Humidity: 75%
 ```
 
-## 📊 API Documentation
+## API Documentation
 
 ### Endpoints
 
@@ -184,7 +222,7 @@ Content-Type: application/json
 }
 ```
 
-## 🎨 UI Features
+## UI Features
 
 - **Modern Glassmorphism**: Frosted glass effect with backdrop blur
 - **Smooth Animations**: Fade-in effects and transitions
@@ -193,21 +231,21 @@ Content-Type: application/json
 - **Real-time Feedback**: Loading states and result display
 - **Responsive Design**: Works on mobile, tablet, and desktop
 
-## 🔒 Security
+## Security
 
 - Firebase Authentication with email/password and Google OAuth
 - Secure API endpoints with CORS configuration
 - Environment variable management
 - Firestore security rules (configure in Firebase Console)
 
-## 📈 Performance
+## Performance
 
 - **Image Processing**: ~2-3 seconds
 - **Environmental Analysis**: ~1 second
 - **Model Size**: CNN (~15MB), RF (~1MB)
 - **Frontend Bundle**: ~500KB gzipped
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - React 18.3
@@ -228,7 +266,7 @@ Content-Type: application/json
 - GitHub Actions ready
 - Multi-platform deployment configs
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create feature branch (`git checkout -b feature/AmazingFeature`)
@@ -236,28 +274,28 @@ Content-Type: application/json
 4. Push to branch (`git push origin feature/AmazingFeature`)
 5. Open Pull Request
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License.
 
-## 👥 Authors
+## Authors
 
 - Your Name - Initial work
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - TensorFlow team for deep learning framework
 - FastAPI for excellent API framework
 - Firebase for authentication and database
 - Tailwind CSS for styling utilities
 
-## 📞 Support
+## Support
 
-- 📧 Email: your.email@example.com
-- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/Rice-Disease-Detection-System/issues)
-- 💬 Discussions: [GitHub Discussions](https://github.com/yourusername/Rice-Disease-Detection-System/discussions)
+- **Email**: your.email@example.com
+- **Issues**: [GitHub Issues](https://github.com/yourusername/Rice-Disease-Detection-System/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/yourusername/Rice-Disease-Detection-System/discussions)
 
-## 🗺️ Roadmap
+## Roadmap
 
 - [ ] Add more disease types
 - [ ] Implement real-time detection via camera
@@ -268,7 +306,7 @@ This project is licensed under the MIT License.
 - [ ] Add treatment recommendations
 - [ ] Create farmer community features
 
-## 📸 Screenshots
+## Screenshots
 
 ### Login Page
 Beautiful authentication with email and Google sign-in.
@@ -284,7 +322,6 @@ Track all your past predictions with timestamps.
 
 ---
 
-**Made with ❤️ for farmers and agricultural researchers**
+**Made for farmers and agricultural researchers**
 
-🌾 **Help protect rice crops worldwide!** 🌾
-
+**Help protect rice crops worldwide**
