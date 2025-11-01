@@ -1,0 +1,140 @@
+# ===========================
+# Development Documentation (keep local only)
+# ===========================
+CLEANUP_SUMMARY.md
+# Note: PDF files, README.md, and DEPLOYMENT_INSTRUCTIONS.md are kept
+DEPLOYMENT_INSTRUCTIONS.md
+# ===========================
+# Python
+# ===========================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# PyCharm
+.idea/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Environments
+.env
+.env.local
+.env.*.local
+
+# ===========================
+# Node.js / Frontend
+# ===========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# Dependencies
+package-lock.json.backup
+
+# Testing
+coverage/
+
+# Cache
+.cache/
+.parcel-cache/
+
+# ===========================
+# IDE & Editor
+# ===========================
+.vscode/
+.cursor/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# AI Assistant Rules (keep these ignored)
+.clinerules/
+.kilocode/
+.roo/
+.windsurf/
+.kiro/
+.qoder/
+.augment/
+
+# ===========================
+# Operating System
+# ===========================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ===========================
+# Logs & Temporary Files
+# ===========================
+*.log
+logs/
+*.tmp
+*.temp
+tmp/
+temp/
+
+# ===========================
+# Archive & Backup
+# ===========================
+archive/
+*.zip
+*.tar.gz
+*.rar
+*.bak
+*.backup
+
+# ===========================
+# Models (Optional - Uncomment if models are too large)
+# ===========================
+# Backend/Models/*.h5
+# Backend/Models/*.keras
+# Backend/Models/*.pkl
+
+# ===========================
+# Deployment Configs (keep these for Render + Vercel)
+# ===========================
+# vercel.json - Needed for Vercel deployment
+# Dockerfile - Optional for Render deployment
+
+# ===========================
+# Test Data (Optional - Uncomment to ignore large test images)
+# ===========================
+# Test data/
