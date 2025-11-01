@@ -2,8 +2,9 @@
 # Development Documentation (keep local only)
 # ===========================
 CLEANUP_SUMMARY.md
-# Note: PDF files, README.md, and DEPLOYMENT_INSTRUCTIONS.md are kept
-DEPLOYMENT_INSTRUCTIONS.md
+FIREBASE_SECURITY_GUIDE.md
+SECURITY_QUICK_START.md
+# Note: PDF files, README.md, DEPLOYMENT_INSTRUCTIONS.md, and firestore.rules are kept
 # ===========================
 # Python
 # ===========================

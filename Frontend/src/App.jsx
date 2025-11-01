@@ -83,6 +83,7 @@ function App() {
           result: response.data.message,
           timestamp: new Date(),
           userName: userName,
+          userId: auth.currentUser?.uid, // For security rules
         });
         console.log("✅ Saved to Firestore");
       } catch (dbError) {
@@ -120,6 +121,7 @@ function App() {
           data: tabularData,
           timestamp: new Date(),
           userName: userName,
+          userId: auth.currentUser?.uid, // For security rules
         });
         console.log("✅ Saved to Firestore");
       } catch (dbError) {
@@ -137,7 +139,13 @@ function App() {
 
   const fetchPastPredictions = async () => {
     try {
-      const querySnapshot = await getDocs(collection(db, "predictions"));
+      // Only fetch current user's predictions (more secure)
+      const { query, where } = await import("firebase/firestore");
+      const q = query(
+        collection(db, "predictions"),
+        where("userId", "==", auth.currentUser?.uid)
+      );
+      const querySnapshot = await getDocs(q);
       const predictions = querySnapshot.docs
         .map((doc) => doc.data())
         .sort((a, b) => b.timestamp?.toDate() - a.timestamp?.toDate());
@@ -145,6 +153,18 @@ function App() {
       setShowHistory(true);
     } catch (error) {
       console.error("Error fetching predictions:", error);
+      // Fallback: try fetching all (will work if security rules allow)
+      try {
+        const querySnapshot = await getDocs(collection(db, "predictions"));
+        const predictions = querySnapshot.docs
+          .map((doc) => doc.data())
+          .filter((pred) => pred.userId === auth.currentUser?.uid)
+          .sort((a, b) => b.timestamp?.toDate() - a.timestamp?.toDate());
+        setPastPredictions(predictions);
+        setShowHistory(true);
+      } catch (fallbackError) {
+        console.error("Fallback fetch also failed:", fallbackError);
+      }
     }
   };
 
