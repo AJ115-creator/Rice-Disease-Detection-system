@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { auth, db } from "./firebaseConfig";
 import { signOut } from "firebase/auth";
@@ -33,7 +33,7 @@ function App() {
   const historyRef = useRef(null);
   const headerRef = useRef(null);
 
-  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+  const API_URL = (import.meta.env.VITE_API_URL || "http://localhost:8000").replace(/\/+$/, "");
 
   useEffect(() => {
     if (auth.currentUser) {
