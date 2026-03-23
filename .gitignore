@@ -15,7 +15,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.so
-
+.claude
+Test data
 # Virtual environments
 venv/
 env/

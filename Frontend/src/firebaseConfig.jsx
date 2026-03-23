@@ -1,16 +1,15 @@
-// src/firebase.js
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD73ic9NsVP5CwkEwVbirtpWqru7ZMWWl4",
-  authDomain:  "rice-plant-disease-detec-51b85.firebaseapp.com",
-  projectId: "rice-plant-disease-detec-51b85",
-  storageBucket: "rice-plant-disease-detec-51b85.firebasestorage.app",
-  messagingSenderId: "339781934814",
-  appId: "1:339781934814:web:57dc6c827a336c6101ac4f",
-  measurementId: "G-DVBGEG6L12"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
